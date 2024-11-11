@@ -1,2 +1,2 @@
 # -gestion_hotel 
-Esto va gestionar un hotel
+Esto va gestionar un hotel 
