@@ -11,4 +11,10 @@ class Reserva:
         self.dias = dias 
         self.habitacion = habitacion 
         self.cliente = cliente   
-                 
+class ServicioCuarto:
+    def __init__ (self , habitacion , cliente ):
+        self.habitacion = habitacion 
+        self.cliente = cliente 
+def Agregar_habitacion (self):
+    numero = int(input("Ingrese el numero de la habitacion:"))
+    tipo = input("Elige que tipo de habitacion quiere (Sencilla/Doble)")
