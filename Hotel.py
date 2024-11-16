@@ -1,9 +1,12 @@
+import json 
 from flask import Flask , render_template , request , jsonify
 
 app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+@app.route('/procesar' , methods=['POST'])
+def procesar(): 
 class Habitacion: 
     def  __init__ (self , tipo , numero):
         self.numero = numero 
@@ -49,3 +52,5 @@ class Hotel:
         reserva = Reserva(dias , numero_habitacion , dni_cliente)
         self.reservas.append(reserva )
     def Servicios_cuarto (self):
+if __name__ == '__main__':
+    app.run(debug=True)

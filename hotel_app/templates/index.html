@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Hotel</title>
+    <script src="/static/main.js" defer></script>
+</head>
+<body>
+    <h1>Hotel Sunflower</h1>
+    <h2>Lista de Habitaciones</h2>
+    <ul id="Habitaciones">
+        {% for habitacion in habitaciones %}
+        <li>
+            {{ habitacion.nombre }} - 
+            {% if habitacion.reservada %}
+                Reservada por {{ habitacion.cliente }}
+            {% else %}
+                Disponible
+                <button onclick="reservar({ habitacionid })">Reservar</button>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
