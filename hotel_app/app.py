@@ -1,70 +1,62 @@
-import json
 from flask import Flask, render_template, request, jsonify
-
-class Hotel:
-    def __init__(self, data_file):
-        """Inicializa el hotel con un archivo JSON para simular una base de datos."""
-        self.data_file = data_file
-        self._load_data()
-
-    def _load_data(self):
-        """Carga los datos de habitaciones desde un archivo JSON."""
-        try:
-            with open(self.data_file, 'r') as f:
-                self.habitaciones = json.load(f)
-        except FileNotFoundError:
-            self.habitaciones = []
-
-    def _save_data(self):
-        """Guarda los datos actualizados de las habitaciones en el archivo JSON."""
-        with open(self.data_file, 'w') as f:
-            json.dump(self.habitaciones, f, indent=4)
-
-    def obtener_habitaciones(self):
-        """Devuelve la lista de habitaciones."""
-        return self.habitaciones
-
-    def reservar_habitacion(self, habitacion_id, cliente):
-        """Reserva una habitación si está disponible."""
-        for habitacion in self.habitaciones:
-            if habitacion['id'] == habitacion_id:
-                if not habitacion['reservada']:
-                    habitacion['reservada'] = True
-                    habitacion['cliente'] = cliente
-                    self._save_data()
-                    return {"mensaje": f"Habitación {habitacion_id} reservada por {cliente}."}
-                return {"error": "La habitación ya está reservada."}
-        return {"error": "La habitación no existe."}
-
+import  json
 
 # Configuración de Flask
 app = Flask(__name__)
-hotel = Hotel('data/habitaciones.json')
 
+def load_reservations():
+     with open('data/habitaciones.json' , 'r') as file: 
+         return json.load(file)
+ 
+def save_reservations (reservations):
+    with open('data/habitaciones.json' , 'w') as file: 
+        json.dump(reservations, file, indent=4)
 
 @app.route('/')
 def index():
-    """Página principal: muestra las habitaciones."""
-    return render_template('index.html', habitaciones=hotel.obtener_habitaciones())
+    return render_template('index.html')
+
+@app.route('/habitaciones.html')
+def habitaciones():
+    return render_template('habitaciones.html')
+
+@app.route('/comida.html')
+def comida():
+    return render_template('comida.html')
+
+@app.route('/servicios.html')
+def servicios():
+    return render_template('servicios.html')
+
+@app.route('/junior_suite.html')
+def junior_suite():
+    return render_template('junior_suite.html')
+
+@app.route('/suite_delux.html')
+def suite_delux():
+    return render_template('suite_delux.html')
+
+@app.route('/master_suite.html')
+def master_suite():
+    return render_template('master_suite.html')
+
+@app.route ('/register' , methods =['GET' , 'POST'])
+def register():
+     if request.method == 'POST':
+          data = request.get_json() 
+          room_number = data['room_number']
+          guest_name = data['guest_name'] 
+          room_type = data['room_type']   
+          reservacion = load_reservations()  
+          reservacion.append({'room_number': room_number, 'guest_name': guest_name , 'room_type' : room_type}) 
+          save_reservations(reservacion) 
+          return jsonify({'message': 'Reserva registrada con éxito'})
+     return render_template('registro.html')
 
 
-@app.route('/reservar', methods=['POST'])
-def reservar():
-    """Maneja las reservas de habitaciones."""
-    datos = request.get_json()
-    habitacion_id = datos.get('id')
-    cliente = datos.get('cliente')
-    resultado = hotel.reservar_habitacion(habitacion_id, cliente)
-    if "error" in resultado:
-        return jsonify(resultado), 400
-    return jsonify(resultado)
-
-
-@app.route('/reservas')
-def reservas():
-    """Devuelve la lista de habitaciones reservadas."""
-    reservas = [h for h in hotel.obtener_habitaciones() if h['reservada']]
-    return jsonify(reservas)
+@app.route ('/registro.html')
+def registro():
+    return render_template('registro.html')
 
 
 if __name__ == '__main__':

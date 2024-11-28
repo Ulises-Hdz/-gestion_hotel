@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>HOTEL SUNFLOWER</title>
 		<link rel="stylesheet" type="text/css"
-		href="index.css"/>
+		href="/static/habitaciones.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú de Navegación</title>
@@ -72,7 +72,8 @@
         color: #fff; 
         text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
         }
-
+        .imagen:hover {-webkit-transform:scale(1.3);transform:scale(1.3);
+            transition:all .5s ease-in-out;}
     </style>
 
 	</head>
@@ -87,7 +88,7 @@
         <a href="comida.html">
             Comida</a>
         <div class="right">
-            <img src="sun-sun-ray-icon-transparent-free-png.webp"	border="0"
+            <img src="/static/sun-sun-ray-icon-transparent-free-png.webp"	border="0"
         alt="No existe la imagen" width="60"
         height="60"/>
         </div>
@@ -97,6 +98,36 @@
 	<center><h1> HABITACIONES </h1></center> 
     </div>
 
-    
+    <center><tr>
+        <h2> Junior Suite </h2>
+        <h6> Con más de 40 metros de espacio, estas lujosas junior suites <br>
+            con vista al mar... </h6>
+        <th> <a href="junior_suite.html">
+        <img class="imagen"src="/static/0jUa8_S2D.webp"	border="0"
+        alt="No existe la imagen" width="400"
+        height="250"/></a> </th></tr>
+    </center>
+
+    <center><tr>
+        <h2> Suite Delux </h2>
+        <h6> Con más de 40 metros de espacio, estas lujosas junior suites <br>
+            con vista al mar... </h6>
+        <th> <a href="suite_delux.html">
+        <img class="imagen"src="/static/ahvwL_SEC.webp"	border="0"
+        alt="No existe la imagen" width="400"
+        height="250"/></a> </th></tr>
+    </center>
+
+    <center><tr>
+        <h2> Master Suite </h2>
+        <h6> Con más de 40 metros de espacio, estas lujosas junior suites <br>
+            con vista al mar... </h6>
+        <th> <a href="master_suite.html">
+        <img class="imagen"src="/static/presidential-fam-001.avif"	border="0"
+        alt="No existe la imagen" width="400"
+        height="250"/></a> </th></tr>
+    </center>
 
 </body>
+
+</html>

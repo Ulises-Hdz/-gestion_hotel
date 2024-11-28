@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+<html lang="es"></html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>HOTEL SUNFLOWER</title>
 		<link rel="stylesheet" type="text/css"
-		href="/static/index.css"/>
+		href="/static/registro.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú de Navegación</title>
@@ -91,38 +92,28 @@
         alt="No existe la imagen" width="60"
         height="60"/>
         </div>
-
     </div>
-    <div class="tuclase">
-	<center><h1> HOTEL SUNFLOWER </h1></center> 
-    </div>
-
-    <center><img src="/static/wp7596765-cabo-san-lucas-wallpapers.jpg"	border="0"
-	alt="No existe la imagen" width="1466"
-	height="600"/></center>
-
-    <center><tr>
-        <img src="/static/9fc3038d-c75f-485c-9ac5-b9130f402bd2.webp"	border="0"
-    alt="No existe la imagen" width="700"
-    height="350"/>
-
-        <img src="/static/837fe179-79b6-4a8c-b76c-1832602ace14.webp"	border="0"
-    alt="No existe la imagen" width="700"
-    height="350"/>
-    </tr>
+    <nav>
+        
+          <P>  Registrar </P>
+        <form id="reservationForm"> 
+            <label for="room_number">Número de Habitación:</label>
+            <input type="text" id="room_number" name="room_number" required>
+            <label for="guest_name">Nombre del Huésped:</label> 
+            <input type="text" id="guest_name" name="guest_name" required> 
+            <label for="room_type">Tipo de Habitación:</label>
+             <select id="room_type" name="room_type" required>
+                 <option value="">Seleccione un tipo</option>
+                 <option value="Individual">Junior Suite</option>
+                 <option value="Doble">Suite Delux</option>
+                 <option value="Suite">Master Suite</option>
+             </select>
+            <button type="submit">Registrar</button>
+        </form>
+        <script src="{{ url_for('static', filename='main.js') }}"></script>
+            
+        </p>
     </center>
 
-    <center><h1> QUIENES SOMOS </h1></center>
-    <center><p> Somos uno de los Hoteles con mas prestijio de cabo san lucas <br>
-        ya que tenemos de los mejores servicios que se puede ofrecer en Mexico.<br>
-        Tales como habitaciones maravillosas, comida fantastica, area de fiesta y <br> 
-        de relajacion, contamos con albercas familiares y albercas solo para adultos; <br>
-        tambien contamos con spa, gimnasio y guarderia </p></center>
-    
-    <center><img src="/static/a887263c-39d5-4ed1-a5cd-e830678f9f76.webp"	border="0"
-    alt="No existe la imagen" width="700"
-    height="350"/></center>
-
 </body>
-
 </html>
