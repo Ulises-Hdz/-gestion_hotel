@@ -23,6 +23,7 @@ class Hotel:
         self.reservas = []
 
     def agregar_habitacion(self):
+        print("AGREGAR HABITACIONES")
         numero = int(input("Ingresa el número de la habitación: "))
         tipo = input("Ingresa el tipo de habitación (Junior Suite/Suite Delux/Master Suite): ")
         habitacion = Habitacion(numero, tipo)
@@ -30,6 +31,7 @@ class Hotel:
         print(f"Habitación {numero} de tipo {tipo} agregada correctamente.")
 
     def registrar_cliente(self):
+        print("REGISTRO DE CLIENTES")
         nombre = input("Ingresa el nombre del cliente: ")
         dni = input("Ingresa el DNI del cliente: ")
         cliente = Cliente(nombre, dni)
@@ -37,6 +39,7 @@ class Hotel:
         print(f"Cliente {nombre} registrado correctamente.")
 
     def realizar_reserva(self):
+        print("MENU DE RESERVA")
         dni_cliente = input("Ingresa el DNI del cliente: ")
         numero_habitacion = int(input("Ingresa el número de la habitación: "))
         dias = int(input("Ingresa la cantidad de días de la reserva: "))
@@ -61,7 +64,7 @@ class Hotel:
 
 def main():
     hotel = Hotel("HOTEL SUNFLOWER")
-
+    print("HOTEL SUNFLOWER")
     while True:
         print("\n1. Agregar habitación")
         print("2. Registrar cliente")
