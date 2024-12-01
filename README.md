@@ -1,2 +1,15 @@
-# -gestion_hotel 
-Esto va gestionar un hotel. Se van a crear las clases de cada objeto del hotel incluso las reservas, clientes, habitaciones etc. Se crean los metodos de cada clases. Se crean las funciones que va tener el hotel. Se editaron muchos errores. Se acomodaron algunos archivos. Se agregan las habitaciones y el registro se acomodo.
+![Tecnologico](/doc/TEC.imagen.jpg)
+# GESTIONAMIENTO DE UN HOTEL.
+* Intregrantes 
+    * Ulises Hern'andez Gutierrez
+    * Ethan Alfredo 
+    * Erick Hazel 
+
+
+## 1.Descripcion del problema.
+## 2. Definición de la solucion.
+## 3. Diseño de la solucion.
+## 4. Desarrollo de la solucion.
+## 5 Depuracion y pruebas.
+## 6 Documentacion.
+
