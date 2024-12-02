@@ -64,7 +64,7 @@ class Hotel:
 
 def main():
     hotel = Hotel("HOTEL SUNFLOWER")
-
+    print("BIENVENIDO AL HOTEL SUNFLOWER, ¿QUE DESEA REALIZAR?")
     while True:
         print("\n1. Agregar habitación")
         print("2. Registrar cliente")
