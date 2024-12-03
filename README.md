@@ -3,15 +3,16 @@
 
 * Intregrantes 
     * Ulises Hernández Gutiérrez
-    * Ethan Alfredo 
-    * Erick Hazel 
+    * Ethan Alfredo Gutierrez Perez
+    * Erick Hazel Garcia Marquez
 
 ## 1.Descripcion del problema.
+* ### Se debe gestionar un hotel teniendo en cuenta que se deben realizar reservas para los clientes via teclado osea los clientes ingresen sus datos y estos se guardan para realizar la reserva de su habitacion otro aspecto que se debe ver es seleccionar el tipo de habitacion que el cliente desea tener y los dias que se quedara para esto se necesitan funciones para guardar los datos del cliente para luego confirmar la reserva que se quiere realizar. 
 
 ## 2. Definición de la solucion.
-
+* ### Se debe gestionar un hotel a traves del codigo de python en cual se desplegaran opciones en la terminal en que deberas escoger via teclado una opcion de de las que desea ejecutar, si registrar clientes, agregar habitaciones, realizar reservas, ver cuantas habitaciones estan disponibles y salir del menu. fuera de la terminal, se van a crear las clases de habitacion, reserva, cliente y hotel con sus respectivos atributos y tambien se van a crear los metodos de agregar habitacion, registrar clientes, realizar reserva y mostrar las habitaciones disponibles esos serian los metodos del hotel por ultimo se va a hacer un menu que ejecute cada metodo via teclado osea seleccionar un numero y se ejecutara uno de los metodos.
 ## 3. Diseño de la solucion.
-### Codigo Pseint
+### Codigo Pseint: 
 ![Pseint](/doc/Captura%20de%20pantalla%202024-11-30%20230449.png)
 ![Pseint](/doc/Captura%20de%20pantalla%202024-11-30%20230505.png)
 ![Pseint](/doc/Captura%20de%20pantalla%202024-11-30%20230524.png)
@@ -25,6 +26,7 @@
 ### Diagrama de flujo:
 ![Diagrama](/doc/GestionHotel4%20prueba.png)
 ## 4. Desarrollo de la solucion.
+### Codigo de Python:
 ```python
 
 class Habitacion:
@@ -120,10 +122,18 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
 ## 5. Depuracion y pruebas.
-### Prueba de Python:
+* ### Prueba de Python:
 ![Prueba_Python](/doc/Captura%20de%20pantalla%202024-12-02%20102948.png)
 
 ## 6. Documentacion.
+* ### Cada metodo realiza una accion diferente como: 
+ 1. Agregar Habitacion: Crea una habitacion con su numero respectivo y el tipo de habitacion que es.
+ 2. Registrar cliente: Aqui se le pide via teclado al cliente su nombre y su dni para registrarlo.
+ 3. Realizar reserva: Aqui se pide el dni del cliente registrado y la habitacion registrada anteriormnete para confirmar la reserva.
+ 4. Mostrar Habiatciones disponibles: Aqui se muestra la lista de habitaciones agregadas anteriormente.
+
+Estos serian los metodos o acciones que se pueden ejecutar en el menu del hotel.
 
 
